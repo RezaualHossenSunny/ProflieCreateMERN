@@ -22,7 +22,12 @@ const CreateUser = () => {
         body:JSON.stringify(user)
       })
       .then(res => res.json())
-      .then(data => console.log(data)
+      .then(data =>{
+        if(data.acknowledged > 0){
+          alert('data added Suceesfully')
+          form.reset()
+        }
+      }
 
 
        
